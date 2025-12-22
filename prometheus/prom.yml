@@ -7,13 +7,12 @@ scrape_configs:
       - targets: ['localhost:9090']
   - job_name: 'vllm'
     static_configs:
-      - targets: ['niwhghj0uprhbf-8000.proxy.runpod.net']  # vLLM сервер
-    metrics_path: /metrics
-  - job_name: 'vllm 2 ada'
-    static_configs:
       - targets: ['2z24p8xymur389-8000.proxy.runpod.net']  # vLLM сервер
     metrics_path: /metrics
 
+  # niwhghj0uprhbf-8000.proxy.runpod.net - старый сервер
+  # 2z24p8xymur389-8000.proxy.runpod.net - новый сервер
+  
   # - job_name: 'example_api'
   #   scheme: http
   #   static_configs:
