@@ -7,7 +7,7 @@ scrape_configs:
       - targets: ['localhost:9090']
   - job_name: 'vllm'
     static_configs:
-      - targets: ['4kme75zhycd1de-8000.proxy.runpod.net']  # vLLM сервер
+      - targets: ['6em9jn3nolti0f-8000.proxy.runpod.net']  # vLLM сервер
     metrics_path: /metrics
   - job_name: 'openresty-edge'
     scrape_interval: 15s
