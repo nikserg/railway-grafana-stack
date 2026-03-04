@@ -16,6 +16,10 @@ scrape_configs:
       - targets: ['openresty:9100']
         labels:
           service: 'api-nika'
+  - job_name: 'mysql-app-metrics'
+    scrape_interval: 15s
+    static_configs:
+      - targets: ['prometheus-scrapper.railway.internal:8080']
 
   # niwhghj0uprhbf-8000.proxy.runpod.net - старый сервер
   # 2z24p8xymur389-8000.proxy.runpod.net - сервер RTX 6000 Ada (22.12.2025)
