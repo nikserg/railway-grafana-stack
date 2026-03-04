@@ -17,8 +17,7 @@ scrape_configs:
         labels:
           service: 'api-nika'
   - job_name: 'mysql-app-metrics'
-    scrape_interval: 15s
-    metrics_path: /metrics
+    scrape_interval: 60s
     static_configs:
       - targets: ['prometheus-scrapper.railway.internal:8080']
 
