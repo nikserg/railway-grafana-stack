@@ -20,6 +20,12 @@ scrape_configs:
     scrape_interval: 60s
     static_configs:
       - targets: ['prometheus-scrapper.railway.internal:8080']
+  - job_name: 'mysql'
+    scrape_interval: 15s
+    static_configs:
+      - targets: ['mysql-metrics-collector.railway.internal:9104']
+        labels:
+          service: 'mysql'
 
   # niwhghj0uprhbf-8000.proxy.runpod.net - старый сервер
   # 2z24p8xymur389-8000.proxy.runpod.net - сервер RTX 6000 Ada (22.12.2025)
